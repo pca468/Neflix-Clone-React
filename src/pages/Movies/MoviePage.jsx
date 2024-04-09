@@ -2,8 +2,8 @@ import React from 'react'
 
 const MoviePage = () => {
   return (
-    <div>
-      
+    <div style={{color:"white"}}>
+      MoviePage
     </div>
   )
 }

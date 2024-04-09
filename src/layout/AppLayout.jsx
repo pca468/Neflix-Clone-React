@@ -7,6 +7,7 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Outlet } from "react-router-dom"
 
+
 //Outlet =>  라우터 안에 있는 자손들을 갖고 오게 도와주는 컴포넌트
 
 const AppLayout = () => { 

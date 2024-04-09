@@ -1,14 +1,14 @@
-import {useQuery} from "@tanstack/react-query";
-import api from "../utils/api"
+import { useQuery } from "@tanstack/react-query";
+import api from "../utils/api";
 
-const fetchPopularMovies= () => {
+const fetchPopularMovies=()=>{
     return api.get(`/movie/popular`)
 }
 
-export const usePopularMoviesQuery= () => { // custom hook을 만드는 이유는 나중에 가져다 쓰기 편하다.
+export const usePopularMoviesQuery=()=>{ // custom hook을 따로 만드는 이유 => 나중에 hook을 그대로 활용하기 위함 
     return useQuery({
         queryKey:['movie-popular'],
-        quertFn:fetchPopularMovies,
-        select:(result) => result.data
-    })
-}
+        queryFn:fetchPopularMovies,
+        select:(result) => result.data,
+    });
+};

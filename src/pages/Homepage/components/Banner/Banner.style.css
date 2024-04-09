@@ -22,3 +22,8 @@
     height: 100%;
     padding: 2rem;
 }
+
+/* banner-text-area >* => 해당 classname 밑에 있는 모든 부분  */
+.banner-text-area > *{ 
+    z-index: 2;
+}
