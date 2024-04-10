@@ -3,10 +3,14 @@ import { usePopularMoviesQuery } from "../../../../hooks/usePopularMovies";
 import { Alert } from "bootstrap";
 import MovieSlider from "../../../../common/MovieSlider/MovieSlider";
 import { responsive } from "../../../../constants/responsive";
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+import MovieCard from "../../../../common/MovieCard/MovieCard";
 
 
 const PopularMovieSlide = () => {
   const { data, isLodaing, isError, error } = usePopularMoviesQuery();
+  console.log("asd", data)
 
   if (isLodaing) {
     return <h1>Loading...</h1>;
@@ -16,8 +20,12 @@ const PopularMovieSlide = () => {
   }
   return (
     <div>
-
-    <MovieSlider title='Popular Movies' movies ={data.results} responsive={responsive}/>  
+      <MovieSlider 
+      title="Popular Movies"
+      movies={data.results}
+      responsive={responsive}
+      />
+      
     </div>
   );
 };

@@ -4,10 +4,9 @@ import { Alert } from "bootstrap";
 import MovieSlider from "../../../../../common/MovieSlider/MovieSlider";
 import { responsive } from "../../../../../constants/responsive";
 
-
-
 const TopRatedMovieSlide = () => {
   const { data, isLodaing, isError, error } = useTopRatedMoviesQuery();
+  console.log("왜 데이터가 안오지?", data);
 
   if (isLodaing) {
     return <h1>Loading...</h1>;
@@ -17,7 +16,11 @@ const TopRatedMovieSlide = () => {
   }
   return (
     <div>
-      <MovieSlider title='Top Rated Movies' movies={data.results} responsive={responsive}/>
+      <MovieSlider
+        title="Top Rated Movies"
+        movies={data.results}
+        responsive={responsive}
+      />
     </div>
   );
 };

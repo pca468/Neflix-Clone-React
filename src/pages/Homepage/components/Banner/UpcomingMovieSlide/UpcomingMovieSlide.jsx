@@ -4,11 +4,9 @@ import { Alert } from "bootstrap";
 import MovieSlider from "../../../../../common/MovieSlider/MovieSlider";
 import { responsive } from "../../../../../constants/responsive";
 
-
-
 const UpcomingMoviesQuery = () => {
   const { data, isLodaing, isError, error } = useUpcomingMoviesQuery();
-
+ 
   if (isLodaing) {
     return <h1>Loading...</h1>;
   }
@@ -17,7 +15,11 @@ const UpcomingMoviesQuery = () => {
   }
   return (
     <div>
-      <MovieSlider title='Upcoming Movies' movies={data.results} responsive={responsive}/>
+      <MovieSlider
+        title="Upcoming Movies"
+        movies={data.results}
+        responsive={responsive}
+      />
     </div>
   );
 };
