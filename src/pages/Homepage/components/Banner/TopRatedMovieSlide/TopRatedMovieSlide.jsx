@@ -5,10 +5,10 @@ import MovieSlider from "../../../../../common/MovieSlider/MovieSlider";
 import { responsive } from "../../../../../constants/responsive";
 
 const TopRatedMovieSlide = () => {
-  const { data, isLodaing, isError, error } = useTopRatedMoviesQuery();
+  const { data, isLoading, isError, error } = useTopRatedMoviesQuery();
   console.log("왜 데이터가 안오지?", data);
 
-  if (isLodaing) {
+  if (isLoading) {
     return <h1>Loading...</h1>;
   }
   if (isError) {

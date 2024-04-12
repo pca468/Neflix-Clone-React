@@ -9,10 +9,10 @@ import MovieCard from "../../../../common/MovieCard/MovieCard";
 
 
 const PopularMovieSlide = () => {
-  const { data, isLodaing, isError, error } = usePopularMoviesQuery();
+  const { data, isLoading, isError, error } = usePopularMoviesQuery();
   console.log("asd", data)
 
-  if (isLodaing) {
+  if (isLoading) {
     return <h1>Loading...</h1>;
   }
   if (isError) {

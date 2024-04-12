@@ -5,9 +5,9 @@ import MovieSlider from "../../../../../common/MovieSlider/MovieSlider";
 import { responsive } from "../../../../../constants/responsive";
 
 const UpcomingMoviesQuery = () => {
-  const { data, isLodaing, isError, error } = useUpcomingMoviesQuery();
+  const { data, isLoading, isError, error } = useUpcomingMoviesQuery();
  
-  if (isLodaing) {
+  if (isLoading) {
     return <h1>Loading...</h1>;
   }
   if (isError) {
